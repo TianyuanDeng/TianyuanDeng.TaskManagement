@@ -86,6 +86,7 @@ namespace TianyuanDeng.TaskManagement.Infrastructure.Services
                     Id = task.Id,
                     Title = task.Title,
                     DueDate = task.DueDate,
+                    Priority = task.Priority,
                     Description = task.Description
                 });
 

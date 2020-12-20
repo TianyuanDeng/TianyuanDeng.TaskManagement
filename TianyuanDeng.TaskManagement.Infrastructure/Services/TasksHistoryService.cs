@@ -36,10 +36,10 @@ namespace TianyuanDeng.TaskManagement.Infrastructure.Services
             return taskRegisterModel;
         }
 
-        public async Task DeletTask(DeleteModel deleteModel)
+        public async Task DeletTask(int id)
         {
-            var review = await _tasksHistoryRepository.ListAsync(r => r.UserId == deleteModel.UserId && r.TaskId == deleteModel.TaskId);
-            await _tasksHistoryRepository.DeleteAsync(review.First());
+            var review = await _tasksHistoryRepository.GetByIdAsync(id);
+            await _tasksHistoryRepository.DeleteAsync(review);
         }
 
         public async Task<IEnumerable<TasksHistoryResponseModel>> GetAllTasks(int UserId)

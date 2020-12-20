@@ -16,6 +16,6 @@ namespace TianyuanDeng.TaskManagement.Core.ServiceInterface
 
         Task<TasksHistoryRegisterModel> CreateTaskHistory(TasksHistoryRegisterModel taskRegisterModel);
         Task<TasksHistoryUpdateModel> UpdateTask(TasksHistoryUpdateModel taskRegisterModel);
-        Task DeletTask(DeleteModel deleteModel);
+        Task DeletTask(int id);
     }
 }

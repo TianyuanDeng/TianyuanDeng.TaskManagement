@@ -58,10 +58,10 @@ namespace TianyuanDeng.TaskManagement.API.Controllers
             return Ok(updateedTask);
         }
 
-        [HttpDelete("delete")]
-        public async Task<IActionResult> DeleteTask(UserDeleteModel deleteModel)
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteTask(int id)
         {
-            await _userService.DeletUser(deleteModel);
+            await _userService.DeletUser(id);
             return Ok("Successfully deleted");
         }
 

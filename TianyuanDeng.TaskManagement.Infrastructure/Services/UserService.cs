@@ -44,9 +44,9 @@ namespace TianyuanDeng.TaskManagement.Infrastructure.Services
             return response;
         }
 
-        public async Task DeletUser(UserDeleteModel deleteModel)
+        public async Task DeletUser(int id)
         {
-            var user = await _userRepository.GetByIdAsync(deleteModel.Id);
+            var user = await _userRepository.GetByIdAsync(id);
             if (user == null) throw new Exception("Please enter correct UserId");
 
             await _userRepository.DeleteAsync(user);

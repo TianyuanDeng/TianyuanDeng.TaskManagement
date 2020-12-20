@@ -15,6 +15,6 @@ namespace TianyuanDeng.TaskManagement.Core.ServiceInterface
 
         Task<IEnumerable<UserResponseModel>> GetAllUsers();
         Task<UserUpdateModel> UpdateUsers(UserUpdateModel userUpdateModel);
-        Task DeletUser(UserDeleteModel deleteModel);
+        Task DeletUser(int id);
     }
 }

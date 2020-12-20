@@ -19,10 +19,10 @@ namespace TianyuanDeng.TaskManagement.API.Controllers
             _tasksHistoryService = tasksHistoryService;
         }
 
-        [HttpGet("all")]
-        public async Task<IActionResult> GetAllTasks(int UserId)
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetAllTasks(int id)
         {
-            var allTasks = await _tasksHistoryService.GetAllTasks(UserId);
+            var allTasks = await _tasksHistoryService.GetAllTasks(id);
             if (!allTasks.Any())
             {
                 return NotFound("No Tasks Found");
@@ -54,11 +54,11 @@ namespace TianyuanDeng.TaskManagement.API.Controllers
             return Ok(updateedTask);
         }
 
-        [HttpDelete("delete")]
-        public async Task<IActionResult> DeleteTask(DeleteModel deleteModel)
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteTask(int id)
         {
-            await _tasksHistoryService.DeletTask(deleteModel);
-            return Ok("Successfully deleted");
+            await _tasksHistoryService.DeletTask(id);
+            return NoContent();
         }
     }
 }
