@@ -72,7 +72,7 @@ namespace TianyuanDeng.TaskManagement.Infrastructure.Services
                 Description = taskRegisterModel.Description,
                 DueDate = taskRegisterModel.DueDate,
                 Completed = taskRegisterModel.Completed,
-                Remarks = taskRegisterModel.Remakrs,
+                Remarks = taskRegisterModel.Remarks,
                 UserId = taskRegisterModel.UserId
             };
 

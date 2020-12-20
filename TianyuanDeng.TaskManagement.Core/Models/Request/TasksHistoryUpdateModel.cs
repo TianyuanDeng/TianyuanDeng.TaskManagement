@@ -22,8 +22,8 @@ namespace TianyuanDeng.TaskManagement.Core.Models.Request
         public DateTime? DueDate { get; set; }
 
         public DateTime? Completed { get; set; }
-
+     
         [StringLength(500)]
-        public string Remakrs { get; set; }
+        public string Remarks { get; set; }
     }
 }
